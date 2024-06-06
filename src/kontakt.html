@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="et" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./output.css" rel="stylesheet">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body class="font-rosario">
+    <nav class="bg-white text-[#0A1113] fixed top-0 z-10 w-full">
+      <div class="flex justify-between items-center py-[16px] px-[200px]">
+        <a href="" class="bg-[#CDD8DB] py-[20px] px-[50px]">Logo</a>
+
+        <ul class="text-[18px] font-medium flex gap-[24px]">
+          <li>
+            <a href="/src/index.html">Avaleht</a>
+          </li>
+          <li>
+            <a href="/src/teenused.html">Teenused</a>
+          </li>
+          <li>
+            <a href="/src/demineral.html">Küttevee demineraliseerimine</a>
+          </li>
+          <li>
+            <a href="/src/galerii.html">Tehtud tööd</a>
+          </li>
+          <li>
+            <a href="/src/kontakt.html">Kontakt</a>
+          </li>
+        </ul>
+
+        <a href="" class="bg-[#D2830D] text-white py-[10px] px-[20px] hover:bg-[#A8690A] duration-200">Võta ühendust</a>
+      </div>
+    </nav>
+
+
+    <section class="hero2 text-[#F7F8F9] mt-[95px] pt-[135px] px-[275px]" id="top">
+        <div>
+          <h1 class="text-[48px]">Kontakt</h1>
+          <hr class="border-[2px] border-[#D2830D] w-[128px]">
+        </div>
+    </section>
+
+    <section class="py-[100px] px-[275px]">
+        <div class="flex gap-[50px]">
+            <div class="flex flex-col gap-[32px] w-[476px]">
+                <div class="text-[#132226] grid gap-[16px]">
+                    <h1 class="text-[32px] font-semibold">Võta meiega ühendust!</h1>
+                    <p class="text-[16px] leading-7">
+                        Kas vajate abi küttesüsteemi probleemide lahendamisel
+                        või soovite lihtsalt nõu küsida? Ärge kõhelge - võtke 
+                        meiega   ühendust ja laske meie ekspertidel leida teie jaoks parim lahendus.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 gap-[32px]">
+                    <div class="flex gap-[16px] items-center">
+                      <img src="/assets/icons/contact/Frame 73.png" alt="">
+                      <div class="flex flex-col">
+                        <h1 class="text-[20px]">Thermoelement OÜ</h1>
+                        <p class="text-[16px]">Reg. kood: </p>
+                      </div>
+                    </div>
+
+                    <div class="flex gap-[16px] items-center">
+                      <img src="/assets/icons/contact/Frame 74.png" alt="">
+                      <div class="flex flex-col">
+                        <h1 class="text-[20px]">info@thermoelement.ee</h1>
+                        <p class="text-[16px]">Kirjuta meile</p>
+                      </div>
+                    </div>
+
+                    <div class="flex gap-[16px] items-center">
+                      <img src="/assets/icons/contact/Frame 75.png" alt="">
+                      <div class="flex flex-col">
+                        <h1 class="text-[20px]">+372 555 555 555</h1>
+                        <p class="text-[16px]">Helista meile</p>
+                      </div>
+                    </div>
+
+                    <div class="flex gap-[16px] items-center">
+                      <img src="/assets/icons/contact/Frame 83.png" alt="">
+                      <div class="flex flex-col">
+                        <h1 class="text-[20px]">See linn, see maakond, see maja</h1>
+                        <p class="text-[16px]">Juriidiline aadress</p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container mx-auto mt-10 w-[524px]">
+                <form class="bg-white px-8 pt-6 pb-8 mb-4" x-data="{
+                  name: '',
+                  email: '',
+                  phone: '',
+                  subject: '',
+                  message: '',
+                  file: null,
+                  showSuccess: false,
+                  showError: false,
+                  errorMessage: '',
+              
+                  handleFileChange(event) {
+                    this.file = event.target.files[0];
+                  },
+              
+                  handleSubmit(event) {
+                    event.preventDefault();
+              
+                    console.log({
+                      name: this.name,
+                      email: this.email,
+                      phone: this.phone,
+                      subject: this.subject,
+                      message: this.message,
+                      file: this.file,
+                    });
+              
+                    // Simulate successful submission
+                    this.showSuccess = true;
+                    this.showError = false;
+                    this.errorMessage = '';
+              
+                    // Simulate error
+                    this.showSuccess = false;
+                    this.showError = true;
+                    this.errorMessage = 'An error occurred. Please try again.';
+                  },
+                }">
+                  <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
+                      Nimi
+                    </label>
+                    <input
+                      class=" appearance-none border-[#30565E] border-[1px] w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:-outline"
+                      id="name"
+                      type="text"
+                      placeholder="Ees- ja perekonnanimi"
+                      x-model="name"
+                    />
+                  </div>
+              
+                  <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+                      Meiliaadress
+                    </label>
+                    <input
+                      class=" appearance-none border-[#30565E] border-[1px] w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:-outline"
+                      id="email"
+                      type="email"
+                      placeholder="E-mail"
+                      x-model="email"
+                    />
+                  </div>
+              
+                  <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="phone">
+                      Telefoninumber
+                    </label>
+                    <input
+                      class=" appearance-none border-[#30565E] border-[1px] w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:-outline"
+                      id="phone"
+                      type="tel"
+                      placeholder="Telefoninumber"
+                      x-model="phone"
+                    />
+                  </div>
+              
+                  <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="subject">
+                      Teema
+                    </label>
+                    <select
+                      class=" appearance-none border-[#30565E] border-[1px] w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:-outline"
+                      id="subject"
+                      x-model="subject"
+                    >
+                      <option value="" class="flex justify-between text-[#C9CDD2]">
+                        Vali nimekirjast
+                        <ion-icon name="chevron-down-outline"></ion-icon>
+                      </option>
+                      <option value="query">Teema 1</option>
+                      <option value="feedback">Teema 2</option>
+                      <option value="other">Midagi muud</option>
+                    </select>
+                  </div>
+                  
+                  <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="file">
+                      Lisa fail
+                    </label>
+                    <input
+                      class="w-full py-2 text-gray-700 leading-tight focus:outline-none"
+                      id="file"
+                      type="file"
+                      @change="handleFileChange"
+                    />
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="message">
+                      Kirjelda projekti
+                    </label>
+                    <textarea
+                      class=" appearance-none border-[#30565E] border-[1px] w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none"
+                      id="message"
+                      placeholder="Sinu sõnum"
+                      x-model="message"
+                    ></textarea>
+                  </div>
+              
+                  <div class="flex items-center justify-between">
+                    <button
+                      class="bg-[#D2830D] text-white py-[10px] px-[20px] hover:bg-[#A8690A] duration-200 w-full"
+                      type="submit"
+                      @click="handleSubmit"
+                    >
+                      Saada sõnum
+                    </button>
+                  </div>
+              
+                  <template x-if="showSuccess">
+                    <div class="mt-4 text-green-500 font-bold">Sõnum edukalt saadetud!</div>
+                  </template>
+              
+                  <template x-if="showError">
+                    <div class="mt-4 text-red-500 font-bold">
+                      Viga: {{ errorMessage }}
+                    </div>
+                  </template>
+                </form>
+              </div>
+   
+        </div>
+    </section>
+
+    <section class="px-[150px] py-[100px]" id="ev">
+      <div class="flex justify-center gap-[64px]">
+        <div class="text-[#132226] max-w-[584px]">
+          <div class="grid gap-[16px]">
+            <h1 class="text-[32px] font-semibold">Ettevõttest</h1>
+            <p class="text-[16px] leading-6">
+              <span class="font-bold">Thermoelement OÜ</span> on teie usaldusväärne partner küttesüsteemide remondi ja hoolduse valdkonnas.
+               Oleme pühendunud tagama, et teie kodu ja tööruumid oleksid alati soojad ja mugavad.
+               Meie laiaulatuslikud teenused hõlmavad kõike alates küttesüsteemide remondist ja hooldusest kuni 
+               küttevee demineraliseerimise ja torustike läbipesuni.
+            </p>
+          </div>
+
+          <div class="grid gap-[10px] pt-[25px]">
+            <h1 class="font-bold text-[18px]">Kes me oleme</h1>
+            <p class="text-[16px] leading-6">
+              Oleme kogenud spetsialistide meeskond, kellel on aastatepikkune kogemus 
+              küttesüsteemide valdkonnas. Meie teadmised ja oskused võimaldavad meil pakkuda usaldusväärseid
+               ja efektiivseid lahendusi igasuguste küttesüsteemide jaoks. Pühendume igapäevaselt kvaliteedi 
+               tagamisele ja klientide ootuste ületamisele.
+            </p>
+          </div>
+
+          <div class="grid gap-[10px] pt-[25px]">
+            <h1 class="font-bold text-[18px]">Meie missioon</h1>
+            <p class="text-[16px] leading-6">
+              Meie missioon on pakkuda tipptasemel küttesüsteemide remondi ja hoolduse teenuseid,
+               mis tagavad teie küttesüsteemi tõrgeteta ja efektiivse töö. Soovime luua pikaajalisi ja 
+              usaldusväärseid suhteid oma klientidega, pakkudes neile parimat võimalikku teenindust.
+            </p>
+          </div>
+
+          <p class="text-[16px] font-bold pt-[25px]">Meie meeskond ootab rõõmuga võimalust teid aidata!</p>
+        </div>
+
+        <div class="rectangles-inverted scale-90"> 
+          <div class="flex justify-center py-10">
+            <img src="/assets/images/Rectangle 72.svg" alt="" class="scale-90">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <section class="bg-[#507279] py-[64px] px-[10px]">
+        <div class="flex justify-center items-center gap-[225px]">
+          <div>
+            <a href="/src/kontakt.html" class="shadow-sm text-white py-[10px] px-[20px] bg-[#D2830D] hover:bg-[#A8690A] duration-200">Võta meiega ühendust</a>
+          </div>
+          
+          <p class="text-[#FAF3E7] text-[32px] ">
+            Vajate professionaalset lahendust? <br>
+            Vaadake meie teenuste valikut ja võtke meiega ühendust!
+          </p>
+        </div>
+      </section>
+      <hr class="border-[#D2830D] border-[1px]">
+  
+      <div class="bg-[#30565E] text-[#F7F8F9] pt-[75px] px-[125px]">
+        <div class="flex justify-center gap-[100px]">
+          <div class="flex flex-col gap-[24px]">
+            <a href="" class="bg-[#CDD8DB] text-black py-[20px] px-[50px] max-w-[139.48px]">Logo</a>
+            <p class="max-w-[355px] text-[14px] leading-7">
+              Meie kogenud meeskond pakub kiireid ja professionaalseid küttesüsteemide remondi- 
+              ja hooldusteenuseid Saaremaal, Muhumaal, Lääne-Eestis ja Hiiumaal.
+              Tagame teile personaalse lähenemise ning usaldusväärse teeninduse, et leida parim lahendus teie vajadustele.
+            </p>
+          </div>
+  
+          <div>
+            <h1 class="text-[24px]">Menüü</h1>
+            <hr class="border-[#D2830D] border-[2px] w-[128px]">
+            
+            <ul class="text-[16px] font-light pt-5 grid gap-[4px]">
+              <li>
+                <a href="">Avaleht</a>
+              </li>
+  
+              <li>
+                <a href="/src/kontakt.html#ev">Ettevõttest</a>
+              </li>
+  
+              <li>
+                <a href="/src/teenused.html">Teenused</a>
+              </li>
+  
+              <li>
+                <a href="/src/galerii.html">Tehtud tööd</a>
+              </li>
+            </ul>
+          </div>
+  
+          <div>
+            <h1 class="text-[24px]">Hea teada</h1>
+            <hr class="border-[#D2830D] border-[2px] w-[128px]">
+            
+            <ul class="text-[16px] font-light pt-5 grid gap-[4px]">
+              <li>
+                <a href="/src/kkk.html">KKK</a>
+              </li>
+  
+              <li>
+                <a href="">Privaatsuspoliitika</a>
+              </li>
+  
+            </ul>
+          </div>
+  
+          <div>
+            <h1 class="text-[24px]">Kontakt</h1>
+            <hr class="border-[#D2830D] border-[2px] w-[128px]">
+            
+            <ul class="text-[16px] font-light pt-5 grid gap-[4px]">
+              <li class="flex items-center gap-[8px]">
+                <img src="/assets/icons/business-center-outline.svg" alt="">
+                <a href="">Thermoelement OÜ</a>
+              </li>
+              
+              <li class="flex items-center gap-[8px]">
+                <img src="/assets/icons/mail-outline.svg" alt="">
+                <a href="">E-Mail</a>
+              </li>
+              
+              <li class="flex items-center gap-[8px]">
+                <img src="/assets/icons/ph_phone-light.svg" alt="">
+                <a href="">Telefoninumber</a>
+              </li>
+  
+            </ul>
+          </div>
+        </div>
+  
+        <p class="text-center text-[14px] text-[#F7F8F9] pt-[50px] pb-[25px]">Kõik õigused kaitstud</p>
+  
+        <a href="#landing" class="bg-[#D2830D] bg-opacity-50 hover:bg-opacity-100 px-[17px] py-[22px] fixed bottom-10 right-20 duration-300">
+          <img src="/assets/icons/UP.svg" alt="">
+        </a>
+      </div>
+    </footer>  
+
+    <script src="script.js"></script>
+</body>
+</html>

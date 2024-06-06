@@ -38,3 +38,11 @@ html {
     background-position: center;
     background-image: url(/assets/rectangles.png);
 }
+
+.rectangles-inverted {
+    width: 416px;
+    height: 602px;
+    background: no-repeat;
+    background-position: center;
+    background-image: url(/assets/rectnagles-inverted.png);
+}
