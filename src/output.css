@@ -685,6 +685,10 @@ video {
   display: grid;
 }
 
+.hidden{
+  display: none;
+}
+
 .h-\[257px\]{
   height: 257px;
 }
@@ -749,10 +753,6 @@ video {
   max-width: 279px;
 }
 
-.max-w-\[345px\]{
-  max-width: 345px;
-}
-
 .max-w-\[355px\]{
   max-width: 355px;
 }
@@ -763,6 +763,10 @@ video {
 
 .max-w-\[476px\]{
   max-width: 476px;
+}
+
+.max-w-\[545px\]{
+  max-width: 545px;
 }
 
 .max-w-\[584px\]{
@@ -781,17 +785,13 @@ video {
   max-width: 817px;
 }
 
-.max-w-\[445px\]{
-  max-width: 445px;
-}
-
-.max-w-\[545px\]{
-  max-width: 545px;
-}
-
 .scale-90{
   --tw-scale-x: .9;
   --tw-scale-y: .9;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.transform{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -807,10 +807,6 @@ video {
 
 .grid-cols-2{
   grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.flex-row-reverse{
-  flex-direction: row-reverse;
 }
 
 .flex-col{
@@ -877,6 +873,10 @@ video {
   gap: 43px;
 }
 
+.gap-\[45px\]{
+  gap: 45px;
+}
+
 .gap-\[4px\]{
   gap: 4px;
 }
@@ -895,14 +895,6 @@ video {
 
 .gap-\[px\]{
   gap: px;
-}
-
-.gap-\[\]{
-  gap: ;
-}
-
-.gap-\[45px\]{
-  gap: 45px;
 }
 
 .overflow-hidden{
@@ -1175,6 +1167,10 @@ video {
   padding-bottom: 35px;
 }
 
+.pb-\[45px\]{
+  padding-bottom: 45px;
+}
+
 .pl-\[100px\]{
   padding-left: 100px;
 }
@@ -1365,6 +1361,12 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.shadow-md{
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .shadow-sm{
   --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
@@ -1438,6 +1440,11 @@ html {
 .hover\:bg-\[\#A8690A\]:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(168 105 10 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-\[\#CDD8DB\]:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(205 216 219 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-\[\#D2830D\]:hover{
